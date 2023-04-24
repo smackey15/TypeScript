@@ -32,7 +32,6 @@ set.add(1)
 
 console.log(set)
 
-
 // let obj = {name:"Max"}
 let obj:{[name:string]:string} = {name:"max"}
 console.log(obj)
