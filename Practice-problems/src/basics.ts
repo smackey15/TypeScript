@@ -42,36 +42,38 @@ console.log("isPublic",isPublic)  //isPublic true
 // let set = new Set()
 /*--------------------write code here--------------------*/
 
-let set = new Set()
+// let set = new Set()
+// set.add(1)
 
 
 
 // -----------------Uncomment testcases----------------------
-console.log(set)
+// console.log(set)
 // -----------------------------------------------------------------------------------------------------
 
 // let obj = {name:"Max"}
 /*--------------------write code here--------------------*/
 
+let obj: {name: string} = {name:"Max"}
 
 
 
 
 // -----------------Uncomment testcases----------------------
-// console.log(obj)
+console.log(obj)
 
 // --------------------------------------------------------------------------------------------------------------
 
 //  let nums = [1,2,3,4]
 /*--------------------write code here--------------------*/
 
-
+let nums: number[] = [1, 2, 3, 4]
 
 
 
 // -----------------Uncomment testcases----------------------
 
-// console.log("nums",nums) //nums [ 1, 2, 3, 4 ]
+console.log("nums",nums) //nums [ 1, 2, 3, 4 ]
 
 
 // --------------------------------------------------------------------------------------------------------------
@@ -81,11 +83,11 @@ console.log(set)
 /*--------------------write code here--------------------*/
 
 
-
+let strs: Array<string> = ['a', 'b', 'c', 'd']
 
 
 // -----------------Uncomment testcases----------------------
-// console.log("strs",strs) //strs [ 'a', 'b', 'c', 'd' ]
+console.log("strs",strs) //strs [ 'a', 'b', 'c', 'd' ]
 
 // ---------------------------------------------------------------------------------------------------------------
 
@@ -94,12 +96,12 @@ console.log(set)
 
 /*--------------------write code here--------------------*/
 
-
+let arr: any[] = [1,2,"a",[],{},true]
 
 
 
 // -----------------Uncomment testcases----------------------
-// console.log("mixArr",arr)  //mixArr [ 1, 2, 'a', [], {}, true ]
+console.log("mixArr",arr)  //mixArr [ 1, 2, 'a', [], {}, true ]
 
 // --------------------------------------------------------------------------------------------------------------
 
@@ -108,12 +110,12 @@ console.log(set)
 
 /*--------------------write code here--------------------*/
 
-
+let tup: [number, string] = [1,"Tom"]
 
 
 
 // -----------------Uncomment testcases----------------------
-// console.log("tuple",tup)   //tuple [ 1, 'Tom' ]
+console.log("tuple",tup)   //tuple [ 1, 'Tom' ]
 
 // ------------------------------------------------------------------------------------------------------------
 
@@ -125,12 +127,12 @@ console.log(set)
 // const large =3
 /*--------------------write code here--------------------*/
 
-
+enum Size {small=1, medium, large}
 
 
 
 // -----------------Uncomment testcases----------------------
-// console.log("Enum Size",Size)       //  Enum Size {'1': 'small', '2': 'medium',  '3': 'large',  small: 1,  medium: 2,  large: 3}
+console.log("Enum Size",Size)       //  Enum Size {'1': 'small', '2': 'medium',  '3': 'large',  small: 1,  medium: 2,  large: 3}
 // ----------------------------------------------------------------------------
 // convet Javascript function is typescript
 
@@ -143,12 +145,14 @@ console.log(set)
 /*--------------------write code here--------------------*/
 
 
-
+function printname(name:string): string {
+       return `Hello ${name}`
+}
 
 
 // -----------------Uncomment testcases----------------------
 
-// console.log(print("Max")   //Hello Max
+console.log(printname("Max"))   //Hello Max
 
 // --------------------------------------------------------------------------------------------------
 // Convert javascript class in typeScript
@@ -166,12 +170,25 @@ console.log(set)
 // }
 /*--------------------write code here--------------------*/
 
+class Cat{
+       public name:string 
+       public age:number
+       public color:string
 
+       constructor(name: string, age: number, color:string) {
+              this.name = name
+              this.age = age
+              this.color = color
+       }
+       myCatData():string {
+              return `My cat name is ${this.name}, she is ${this.age} yr old and she is ${this.color}`
+       }
+}
 
 
 
 // -----------------Uncomment testcases----------------------
 
 
-// let c1 = new Cat("Fluffy",2,white)
-// console.log(c1.myCatData())   //My cat name is Fluffy, she is 2 yr old and she is black & white
+let c1 = new Cat("Fluffy",2,'white')
+console.log(c1.myCatData())   //My cat name is Fluffy, she is 2 yr old and she is black & white
