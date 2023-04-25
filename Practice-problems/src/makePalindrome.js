@@ -10,17 +10,13 @@ Refactor the function such that:
 Bonus: Specify the return type to enforce that the return type matches the input.
 There are many ways to do so, but you may need to do some research into multiple function signatures or the typeof operator
 */
-
-function makePalindrome(num:number | string): number | string {
-
-    const arr = typeof num === 'number' ? String(num).split('') : num.split('');
-    const reversedArr = arr.slice();
-    reversedArr.reverse()
-    const paliArr = arr.concat(reversedArr)
-
-    return typeof num === 'number' ? Number(paliArr.join('')) : paliArr.join('')
+function makePalindrome(num) {
+    var arr = typeof num === 'number' ? String(num).split('') : num.split('');
+    var reversedArr = arr.slice();
+    reversedArr.reverse();
+    var paliArr = arr.concat(reversedArr);
+    return typeof num === 'number' ? Number(paliArr.join('')) : paliArr.join('');
 }
-
 // expected output: 1234554321 (of correct return type)
-console.log(makePalindrome(12345))
-console.log(makePalindrome('12345'))
+console.log(makePalindrome(12345));
+console.log(makePalindrome('12345'));
