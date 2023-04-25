@@ -1,14 +1,14 @@
 export interface dog {
     name: string,
     color: string,
-    barks: true,
+    barks: boolean,
     hasTail?: boolean
 }
 
 export interface cat {
     name: string,
     color: string,
-    meows: true,
+    meows: boolean,
     hasTail: boolean
 }
 

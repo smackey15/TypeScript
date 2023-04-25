@@ -23,12 +23,16 @@ var fido = {
     name: 'fido',
     color: 'gold',
     barks: true,
-    hasTail: true
+    // hasTail: true
 };
 classifyAnimal(fido); // should print 'This is a dog'
-// const whiskers = {
-// }
-// classifyAnimal(whiskers) // should print 'This is a cat'
+var whiskers = {
+    name: 'fido',
+    color: 'gold',
+    meows: true,
+    hasTail: true
+};
+classifyAnimal(whiskers); // should print 'This is a cat'
 // const skyrat = {
 // }
 // classifyAnimal(skyrat) // should print 'This is a pigeon'
