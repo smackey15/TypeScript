@@ -45,6 +45,9 @@ const whiskers = {
 classifyAnimal(whiskers) // should print 'This is a cat'
 
 const skyrat = {
-
+    name: 'fido',
+    color: 'gold',
+    coos: true,
+    canFly: true
 }
 classifyAnimal(skyrat) // should print 'This is a pigeon'

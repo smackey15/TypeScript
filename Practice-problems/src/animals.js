@@ -33,6 +33,10 @@ var whiskers = {
     hasTail: true
 };
 classifyAnimal(whiskers); // should print 'This is a cat'
-// const skyrat = {
-// }
-// classifyAnimal(skyrat) // should print 'This is a pigeon'
+var skyrat = {
+    name: 'fido',
+    color: 'gold',
+    coos: true,
+    canFly: true
+};
+classifyAnimal(skyrat); // should print 'This is a pigeon'
